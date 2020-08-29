@@ -1,12 +1,12 @@
 import {ActionTypes} from '../Actions'
 
-const initialState=[
+const initialState=
     {
         arr:[],
         isFetching:false,
         error:null
     }
-]
+
 export const reducer=(state=initialState,action)=>{
     console.log(`We are going to start here ${state.arr},${state.isFetching},${state.error}`)
 

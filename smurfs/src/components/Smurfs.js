@@ -6,16 +6,16 @@ import Smurf from './Smurf'
 
 const Smurfs=()=>{
 
-const smurfs=useSelector((state)=>state.smurfs)
+const arr=useSelector((state)=>state.arr)
 const dispatch=useDispatch()
 
 useEffect(()=>{
     dispatch(fetchSmurfs())
 },[dispatch])
-console.log("SMURFS",smurfs)
+console.log("SMURFS",arr)
 return(
     <div>
-        {smurfs.map((smurf)=>(<Smurf key={smurf.id}{...smurf}/>))}
+        {arr.map((smurf)=>(<Smurf key={smurf.id}{...smurf}/>))}
     </div>
 )
 }

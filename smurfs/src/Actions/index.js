@@ -31,3 +31,19 @@ export const fetchSmurfs = () => (dispatch) => {
     });
     });
     };
+
+    export const addSmurf = (smurf) => (dispatch) => {
+        theAxios.post("/smurfs", smurf)
+        .then((res) => {
+        dispatch({
+        type: ActionTypes.FETCH_SUCCESS,
+        payload: res.data,
+        });
+        })
+        .catch((err) => {
+        dispatch({
+        type: ActionTypes.FETCH_ERROR,
+        payload: err,
+        });
+        });
+       };
