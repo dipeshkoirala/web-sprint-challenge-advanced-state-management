@@ -26,21 +26,21 @@ const SmurfForm = () => {
  };
  const { name, age, height } = values;
  return (
- <form className="dk1" onSubmit={handleSubmit}>
- <label className="dk">
+ <form className="dk1 bg-primary text-white m-2 p-3" onSubmit={handleSubmit}>
+ <label className="dk color-primary">
  Name:
  <input
- className="dk"
+ className="dk p-2 m-2"
  type="text"
  name="name"
  onChange={handleChange}
  value={name}
  />
  </label>
- <label className="dk">
+ <label className="dk ">
  Age:
  <input
- className="dk"
+ className="dk p-2 m-2"
  type="text"
  name="age"
  onChange={handleChange}
@@ -50,7 +50,7 @@ const SmurfForm = () => {
  <label className="dk">
  Height:
  <input
- className="dk"
+ className="dk p-2 m-2"
  type="text"
  name="height"
  onChange={handleChange}

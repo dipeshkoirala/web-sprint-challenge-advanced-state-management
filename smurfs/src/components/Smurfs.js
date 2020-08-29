@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {fetchSmurfs} from '../Actions/index'
+import {fetchSmurfs} from '../Actions/'
 
 import {useDispatch,useSelector} from 'react-redux'
 import Smurf from './Smurf'
@@ -14,7 +14,7 @@ useEffect(()=>{
 },[dispatch])
 console.log("SMURFS",arr)
 return(
-    <div>
+    <div className='dko bg-success m-2 '>
         {arr.map((smurf)=>(<Smurf key={smurf.id}{...smurf}/>))}
     </div>
 )
