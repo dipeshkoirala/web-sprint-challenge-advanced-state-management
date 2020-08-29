@@ -15,10 +15,10 @@ const theAxios=axios.create({
 
 /*  [*] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`. */
 export const fetchSmurfs = () => (dispatch) => {
-    dispatch({ type: ActionTypes.FETCH_SMURFS });
-    Axios.get("/smurfs")
+    dispatch({ type: ActionTypes.FETCH });
+    theAxios.get("/smurfs")
     .then((res) => {
-    // console.log("RESPONSE", res);
+    console.log("RESPONSE", res);
     dispatch({
     type: ActionTypes.FETCH_SUCCESS,
     payload: res.data,
